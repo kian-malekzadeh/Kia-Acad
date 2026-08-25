@@ -1,0 +1,47 @@
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+.next/
+**/.next/
+out/
+**/out/
+.turbo/
+coverage/
+**/coverage/
+test-results/
+**/test-results/
+playwright-report/
+**/playwright-report/
+.playwright-browsers/
+.pnpm-store/
+.npm-cache/
+*.log
+
+# Local configuration and secrets. Commit templates only.
+.env*
+**/.env*
+!.env.example
+!.env.docker.example
+!**/.env.example
+
+# Course catalog (root db.json) must stay tracked.
+!db.json
+!**/db.json
+
+apps/api/prisma/*.db
+apps/api/prisma/*.db-journal
+apps/api/uploads/
+uploads/
+.cursor/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tsbuildinfo
+*.zip
+.vercel
+
+# Temporary font zip extraction
+_font_extract/
+
