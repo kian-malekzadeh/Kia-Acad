@@ -195,7 +195,7 @@ Report vulnerabilities responsibly per [`SECURITY.md`](SECURITY.md) — please u
 ## ☁️ Deployment
 
 - **GitHub Pages (demo mode):** push `main` → `Deploy GitHub Pages` workflow exports the static app to `/Kia-Acad/`. Live at <https://kian-malekzadeh.github.io/Kia-Acad/>
-- **Self-host Docker:** multi-stage images (`Dockerfile` targets `api`/`web`) behind any reverse proxy; see production checklist inside [`docs/REBUILD_ARCHITECTURE.md`](docs/REBUILD_ARCHITECTURE.md)
+- **Self-host Docker:** hardened multi-stage images (`docker build --target api|web`) running as a non-root `node` user, OCI-labelled, with built-in healthchecks; Compose adds `init: true` and `no-new-privileges` on app containers. See run mode **C** above.
 - **CI:** every commit is validated against a live Postgres before merge
 
 ## 📚 Documentation
