@@ -62,7 +62,6 @@ Thumbs.db
 Desktop.ini
 
 # Deploy / misc
-.vercel
 *.zip
 nohup.out
 
